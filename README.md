@@ -11,6 +11,49 @@
 #### What This Plugin Does
 The OpenAI Trigger plugin connects your Dify workflows with [OpenAI Webhook events](https://platform.openai.com/docs/api-reference/webhook-events). When something happens in your OpenAI workspace, like receiving an update for batch, evaluation , this trigger plugin automatically starts your Dify workflows to respond to these events.
 
+### Get Started
+
+#### Step 1: Create an OpenAI Webhook Trigger in Dify's workflow
+
+![](_assets/img1.png)
+
+#### Step 2: Create an subscription URL
+
+![](_assets/img2.png)
+
+#### Step 3: Copy the callback URL
+
+![](_assets/img3.png)
+
+#### Step 4: Create a Webhook endpoints in OpenAI platform settings
+
+OpenAI platform settings: https://platform.openai.com/settings
+
+1. fill the URL copied from Dify workflow
+2. select subscription events
+
+![](_assets/img4.png)
+
+![](_assets/img5.png)
+
+![](_assets/img6.png)
+
+#### Step 5: Fill the Singing secret
+
+1. Copy the OpenAI's Signing secret
+2. Fill it in Dify's OpenAI Webhook trigger settings
+
+![](_assets/img7.png)
+
+![](_assets/img8.png)
+
+#### Step 8: Setup Dify workflow
+
+![](_assets/img9.png)
+
+![](_assets/img10.png)
+
+
 
 ### Available Events
 
