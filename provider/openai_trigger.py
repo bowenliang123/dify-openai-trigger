@@ -16,6 +16,8 @@ from dify_plugin.errors.trigger import (
 )
 from dify_plugin.interfaces.trigger import Trigger, TriggerSubscriptionConstructor
 
+from utils.webhook_utils import verify_webhook_signature
+
 
 class OpenaiTriggerTrigger(Trigger):
     """
@@ -23,9 +25,18 @@ class OpenaiTriggerTrigger(Trigger):
     """
     def _dispatch_event(self, subscription: Subscription, request: Request) -> EventDispatch:
         try:
+            webhook_secret = subscription.properties.get("webhook_secret")
+            if not webhook_secret:
+                raise TriggerDispatchError("Webhook secret is required to validate request.")
+
+            # very webhook signature with standardwebhooks sdk
+            verify_webhook_signature(webhook_secret, request.data, request.headers)
+
             payload: Mapping[str, Any] = self._validate_payload(request)
             response = Response(response='{"status": "ok"}', status=200, mimetype="application/json")
             events: list[str] = self._dispatch_trigger_events(payload=payload)
+            # print("events", events)
+
             return EventDispatch(events=events, response=response)
         except Exception as exc:
             print("exc", exc)
@@ -37,12 +48,11 @@ class OpenaiTriggerTrigger(Trigger):
 
         # Get the event type from the payload
         event_type = payload.get("type", "")
-        print("event_type", event_type)
 
         if event_type:
             event_type = event_type.replace(".", "_")
             events.append(event_type)
-        print("events", events)
+
         return events
 
     def _validate_payload(self, request: Request) -> Mapping[str, Any]:
@@ -60,9 +70,10 @@ class OpenaiTriggerSubscriptionConstructor(TriggerSubscriptionConstructor):
     """Manage openai_trigger trigger subscriptions."""
 
     def _validate_api_key(self, credentials: dict[str, Any]) -> None:
-        api_key = credentials.get("api_key")
-        if not api_key:
-            raise TriggerProviderCredentialValidationError("API key is required to validate credentials.")
+        # api_key = credentials.get("api_key")
+        # if not api_key:
+        #     raise TriggerProviderCredentialValidationError("API key is required to validate credentials.")
+        pass
 
     def _create_subscription(
         self,

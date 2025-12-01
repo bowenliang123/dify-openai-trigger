@@ -14,20 +14,16 @@ identity:
   icon: "icon.svg"
 
 
-#subscription_schema:
-#  - name: "webhook_secret"
-#    type: "secret-input"
-#    required: false
-#    label:
-#      en_US: "Webhook Secret"
-#      zh_Hans: "Webhook 密钥"
-#      pt_BR: "Segredo do Webhook"
-#      ja_JP: "Webhookシークレット"
-#    help:
-#      en_US: "Optional shared secret used to validate inbound webhook signatures."
-#      zh_Hans: "用于验证 Webhook 签名的可选共享密钥。"
-#      pt_BR: "Segredo compartilhado opcional usado para validar assinaturas de webhook."
-#      ja_JP: "受信Webhookの署名を検証するためのオプションの共有シークレットです。"
+subscription_schema:
+  - name: "webhook_secret"
+    type: "secret-input"
+    required: true
+    label:
+      en_US: "Webhook Signing Secret"
+      zh_Hans: "Webhook 签名密钥"
+    help:
+      en_US: "The signing secret issued  by OpenAI when webhooks configured for verifying incoming webhook signature"
+      zh_Hans: "配置Webhook时OpenAI分配的签名密钥，用于验证传入的 Webhook 签名"
 
 subscription_constructor:
   parameters:
