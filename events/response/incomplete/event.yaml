@@ -17,7 +17,7 @@ parameters:
       en_US: "Webhook Signing Secret"
       zh_Hans: "Webhook 签名密钥"
     help:
-      en_US: "The signing secret issued  by OpenAI when webhooks configured  for verifying incoming webhook signature"
+      en_US: "The signing secret issued  by OpenAI when webhooks configured for verifying incoming webhook signature"
       zh_Hans: "配置Webhook时OpenAI分配的签名密钥，用于验证传入的 Webhook 签名"
 
 output_schema:
