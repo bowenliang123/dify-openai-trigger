@@ -3,8 +3,8 @@ type: plugin
 author: bowenliang123
 name: openai_trigger
 label:
-  en_US: openai_trigger
-  zh_Hans: openai_trigger
+  en_US: OpenAI Webhook Trigger
+  zh_Hans: OpenAI Webhook 触发器
 description:
   en_US: OpenAI Trigger
   zh_Hans: OpenAI Trigger
