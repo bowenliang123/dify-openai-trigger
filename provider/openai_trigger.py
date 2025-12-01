@@ -22,10 +22,14 @@ class OpenaiTriggerTrigger(Trigger):
     Handle the webhook event dispatch.
     """
     def _dispatch_event(self, subscription: Subscription, request: Request) -> EventDispatch:
-        payload: Mapping[str, Any] = self._validate_payload(request)
-        response = Response(response='{"status": "ok"}', status=200, mimetype="application/json")
-        events: list[str] = self._dispatch_trigger_events(payload=payload)
-        return EventDispatch(events=events, response=response)
+        try:
+            payload: Mapping[str, Any] = self._validate_payload(request)
+            response = Response(response='{"status": "ok"}', status=200, mimetype="application/json")
+            events: list[str] = self._dispatch_trigger_events(payload=payload)
+            return EventDispatch(events=events, response=response)
+        except Exception as exc:
+            print("exc", exc)
+            raise exec
 
     def _dispatch_trigger_events(self, payload: Mapping[str, Any]) -> list[str]:
         """Dispatch events based on webhook payload."""
@@ -33,11 +37,12 @@ class OpenaiTriggerTrigger(Trigger):
 
         # Get the event type from the payload
         event_type = payload.get("type", "")
+        print("event_type", event_type)
 
         if event_type:
             event_type = event_type.replace(".", "_")
             events.append(event_type)
-
+        print("events", events)
         return events
 
     def _validate_payload(self, request: Request) -> Mapping[str, Any]:
