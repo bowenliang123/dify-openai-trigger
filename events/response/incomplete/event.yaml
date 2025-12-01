@@ -30,7 +30,7 @@ output_schema:
         id:
           type: string
           description: "The unique ID of the model response."
-    create_at:
+    created_at:
       type: number
       description: "The Unix timestamp (in seconds) of when the model response was completed."
     id:
