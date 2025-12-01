@@ -23,6 +23,9 @@ parameters:
 output_schema:
   type: object
   properties:
+    data:
+      type: object
+      description: "The data payload returned by the OpenAI API."
     create_at:
       type: number
       description: "The Unix timestamp (in seconds) of when the model response was completed."
@@ -35,9 +38,6 @@ output_schema:
     type:
       type: string
       description: "The type of the event."
-    data:
-      type: object
-      description: "The data payload returned by the OpenAI API."
 
 extra:
   python:
