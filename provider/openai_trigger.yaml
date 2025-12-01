@@ -130,6 +130,11 @@ events:
   - events/response/cancelled/event.yaml
   - events/response/failed/event.yaml
   - events/response/incomplete/event.yaml
+  # batch
+  - events/batch/completed/event.yaml
+  - events/batch/cancelled/event.yaml
+  - events/batch/expired/event.yaml
+  - events/batch/failed/event.yaml
 
 extra:
   python:

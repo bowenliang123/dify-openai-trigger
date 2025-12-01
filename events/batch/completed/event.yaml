@@ -1,13 +1,13 @@
 identity:
-  name: "openai_event_response_completed_event"
+  name: "openai_event_batch_completed_event"
   author: "bowenliang123"
   label:
-    en_US: "Response Completed Event"
-    zh_Hans: "Response Completed 事件"
+    en_US: "Batch Completed Event"
+    zh_Hans: "Batch Completed 事件"
 
 description:
-  en_US: "Response Completed Event"
-  zh_Hans: "Response Completed 事件"
+  en_US: "Batch Completed Event"
+  zh_Hans: "Batch Completed 事件"
 
 parameters:
   - name: "webhook_secret"
@@ -38,4 +38,4 @@ output_schema:
 
 extra:
   python:
-    source: events/response/completed/event.py
+    source: events/batch/completed/event.py
