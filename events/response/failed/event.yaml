@@ -25,7 +25,11 @@ output_schema:
   properties:
     data:
       type: object
-      description: "The data payload returned by the OpenAI API."
+      description: "Event data payload."
+      properties:
+        id:
+          type: string
+          description: "The unique ID of the model response."
     create_at:
       type: number
       description: "The Unix timestamp (in seconds) of when the model response was completed."
