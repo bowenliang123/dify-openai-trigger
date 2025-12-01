@@ -1,0 +1,41 @@
+identity:
+  name: "openai_event_eval_run_cancelled_event"
+  author: "bowenliang123"
+  label:
+    en_US: "Eval Run Cancelled Event"
+    zh_Hans: "Eval Run Cancelled 事件"
+
+description:
+  en_US: "Eval Run Cancelled Event"
+  zh_Hans: "Eval Run Cancelled 事件"
+
+parameters:
+  - name: "webhook_secret"
+    type: "string"
+    required: true
+    label:
+      en_US: "Webhook Signing Secret"
+      zh_Hans: "Webhook 签名密钥"
+    help:
+      en_US: "The signing secret issued  by OpenAI when webhooks configured for verifying incoming webhook signature"
+      zh_Hans: "配置Webhook时OpenAI分配的签名密钥，用于验证传入的 Webhook 签名"
+
+output_schema:
+  type: object
+  properties:
+    create_at:
+      type: number
+      description: "The Unix timestamp (in seconds) of when the model response was completed."
+    id:
+      type: string
+      description: "The unique ID of the event."
+    data:
+      type: object
+      description: "The data payload returned by the OpenAI API."
+    type:
+      type: string
+      description: "The type of the event."
+
+extra:
+  python:
+    source: events/eval/run/failed/event.py

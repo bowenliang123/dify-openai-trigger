@@ -139,6 +139,10 @@ events:
   - events/fine_tuning/job/cancelled/event.yaml
   - events/fine_tuning/job/failed/event.yaml
   - events/fine_tuning/job/succeeded/event.yaml
+  # eval
+  - events/eval/run/canceled/event.yaml
+  - events/eval/run/failed/event.yaml
+  - events/eval/run/succeeded/event.yaml
 
 extra:
   python:
