@@ -1,5 +1,5 @@
 identity:
-  name: "fine_tuning.job.failed"
+  name: "fine_tuning_job_failed"
   author: "bowenliang123"
   label:
     en_US: "Finetuning Job Failed Event"

@@ -1,5 +1,5 @@
 identity:
-  name: "fine_tuning.job.succeeded"
+  name: "fine_tuning_job_succeeded"
   author: "bowenliang123"
   label:
     en_US: "Finetuning Job Succeeded Event"

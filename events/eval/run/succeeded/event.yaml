@@ -1,5 +1,5 @@
 identity:
-  name: "eval.run.succeeded"
+  name: "eval_run_succeeded"
   author: "bowenliang123"
   label:
     en_US: "Eval Run Succeeded Event"

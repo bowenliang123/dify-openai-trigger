@@ -1,5 +1,5 @@
 identity:
-  name: "eval.run.canceled"
+  name: "eval_run_canceled"
   author: "bowenliang123"
   label:
     en_US: "Eval Run Cancelled Event"

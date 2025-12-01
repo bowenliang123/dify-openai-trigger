@@ -35,6 +35,7 @@ class OpenaiTriggerTrigger(Trigger):
         event_type = payload.get("type", "")
 
         if event_type:
+            event_type = event_type.replace(".", "_")
             events.append(event_type)
 
         return events

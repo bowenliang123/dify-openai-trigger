@@ -1,5 +1,5 @@
 identity:
-  name: "realtime.call.incoming"
+  name: "realtime_call_incoming"
   author: "bowenliang123"
   label:
     en_US: "Realtime Call Incoming Event"

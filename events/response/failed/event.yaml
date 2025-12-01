@@ -1,5 +1,5 @@
 identity:
-  name: "response.failed"
+  name: "response_failed"
   author: "bowenliang123"
   label:
     en_US: "Response Failed Event"

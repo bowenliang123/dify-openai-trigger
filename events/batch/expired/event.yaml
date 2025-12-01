@@ -1,5 +1,5 @@
 identity:
-  name: "batch.expired"
+  name: "batch_expired"
   author: "bowenliang123"
   label:
     en_US: "Batch Expired Event"

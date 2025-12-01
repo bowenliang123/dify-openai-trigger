@@ -1,5 +1,5 @@
 identity:
-  name: "batch.failed"
+  name: "batch_failed"
   author: "bowenliang123"
   label:
     en_US: "Batch Failed Event"

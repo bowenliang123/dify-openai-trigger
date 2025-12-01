@@ -1,5 +1,5 @@
 identity:
-  name: "response.incomplete"
+  name: "response_incomplete"
   author: "bowenliang123"
   label:
     en_US: "Response Incomplete Event"

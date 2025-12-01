@@ -1,5 +1,5 @@
 identity:
-  name: "response.completed"
+  name: "response_completed"
   author: "bowenliang123"
   label:
     en_US: "Response Completed Event"

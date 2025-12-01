@@ -1,5 +1,5 @@
 identity:
-  name: "fine_tuning.job.cancelled"
+  name: "fine_tuning_job_cancelled"
   author: "bowenliang123"
   label:
     en_US: "Finetuning Job Cancelled Event"

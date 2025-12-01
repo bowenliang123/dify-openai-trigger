@@ -1,5 +1,5 @@
 identity:
-  name: "response.cancelled"
+  name: "response_cancelled"
   author: "bowenliang123"
   label:
     en_US: "Response Cancelled Event"
