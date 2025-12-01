@@ -125,7 +125,7 @@ subscription_constructor:
 
 
 events:
-  - events/response/response_completed.yaml
+  - events/response/completed/response_completed.yaml
 
 extra:
   python:

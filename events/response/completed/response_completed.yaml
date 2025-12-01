@@ -38,4 +38,4 @@ output_schema:
 
 extra:
   python:
-    source: events/response/response_completed.py
+    source: events/response/completed/response_completed.py
