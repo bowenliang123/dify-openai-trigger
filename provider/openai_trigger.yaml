@@ -5,8 +5,8 @@ identity:
     en_US: OpenAI Webhook Trigger
     zh_Hans: OpenAI Webhook 触发器
   description:
-    en_US: OpenAI Webhook Trigger
-    zh_Hans: OpenAI Webhook 触发器
+    en_US: "OpenAI Webhook Trigger for Dify, receiving real-time notifications about events in the API of batch, response, evaluation, fine-tuning and etc."
+    zh_Hans: "Dify 的 OpenAI Webhook 触发器，实时接收有关批处理、响应、评估、微调等 API 事件的通知。"
   icon: "icon.svg"
 
 subscription_schema:
@@ -44,76 +44,6 @@ subscription_constructor:
       zh_Hans: "选择哪些触发事件应该推送到这个订阅。"
       pt_BR: "Selecione quais eventos de gatilho devem ser entregues para esta inscrição."
       ja_JP: "このサブスクリプションに配信するトリガーイベントを選択します。"
-
-#  credentials_schema:
-#    api_key:
-#      type: "secret-input"
-#      required: false
-#      label:
-#        en_US: "API Key"
-#        zh_Hans: "API 密钥"
-#        pt_BR: "Chave de API"
-#        ja_JP: "APIキー"
-#      placeholder:
-#        en_US: "Paste your service API key"
-#        zh_Hans: "粘贴您的服务 API 密钥"
-#        pt_BR: "Cole sua chave de API do serviço"
-#        ja_JP: "サービスのAPIキーを貼り付けてください"
-#      help:
-#        en_US: "Used to authenticate requests to the third-party service."
-#        zh_Hans: "用于向第三方服务发起请求时进行身份验证。"
-#        pt_BR: "Usado para autenticar solicitações ao serviço de terceiros."
-#        ja_JP: "サードパーティサービスへのリクエストを認証するために使用します。"
-
-#########################################################################################
-# If you want to support OAuth, you can uncomment the following code.
-#########################################################################################
-  # oauth_schema:
-  #   client_schema:
-  #   - name: "client_id"
-  #     type: "secret-input"
-  #     required: true
-  #     label:
-  #       en_US: "Client ID"
-  #       zh_Hans: "Client ID"
-  #       ja_JP: "クライアントID"
-  #     placeholder:
-  #       en_US: "Enter the OAuth Client ID"
-  #       zh_Hans: "请输入 OAuth Client ID"
-  #       ja_JP: "OAuth クライアントIDを入力してください"
-  #     help:
-  #       en_US: "The OAuth Client ID."
-  #       zh_Hans: "在第三方获取 Client ID。"
-  #       ja_JP: "OAuth で取得したクライアントID。"
-  #   - name: "client_secret"
-  #     type: "secret-input"
-  #     required: true
-  #     label:
-  #       en_US: "Client Secret"
-  #       zh_Hans: "Client Secret"
-  #       ja_JP: "クライアントシークレット"
-  #     placeholder:
-  #       en_US: "Enter the OAuth Client Secret"
-  #       zh_Hans: "请输入 OAuth Client Secret"
-  #       ja_JP: "OAuth クライアントシークレットを入力してください"
-  #     help:
-  #       en_US: "The OAuth Client Secret generated together with the Client ID."
-  #       zh_Hans: "与 Client ID 一同生成的 OAuth Client Secret。"
-  #       ja_JP: "クライアントIDと併せて発行された OAuth クライアントシークレット。"
-  #   credentials_schema:
-  #   - name: "access_token"
-  #     type: "secret-input"
-  #     label:
-  #       en_US: "Access Token"
-  #       zh_Hans: "访问令牌"
-  #       ja_JP: "アクセストークン"
-  #   - name: "refresh_token"
-  #     type: "secret-input"
-  #     label:
-  #       en_US: "Refresh Token"
-  #       zh_Hans: "刷新令牌"
-  #       ja_JP: "リフレッシュトークン"
-
 
 events:
   # response

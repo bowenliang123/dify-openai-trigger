@@ -6,8 +6,8 @@ label:
   en_US: OpenAI Trigger
   zh_Hans: OpenAI 触发器
 description:
-  en_US: OpenAI Webhook Trigger
-  zh_Hans: OpenAI Webhook 触发器
+  en_US: "OpenAI Webhook Trigger for Dify, receiving real-time notifications about events in the API of batch, response, evaluation, fine-tuning and etc."
+  zh_Hans: "Dify 的 OpenAI Webhook 触发器，实时接收有关批处理、响应、评估、微调等 API 事件的通知。"
 icon: icon.svg
 icon_dark: icon-dark.svg
 resource:
