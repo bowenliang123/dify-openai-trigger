@@ -38,7 +38,7 @@ class OpenaiTriggerTrigger(Trigger):
             logging.exception(f"Failed to parse or validate webhook signature."
                               f" Length of OpenAI Webhook signing secret: {len(webhook_secret)}."
                               f" Webhook request body: {str(request.data)}.")
-            raise exec
+            raise exc
 
     def _dispatch_trigger_events(self, payload: Mapping[str, Any]) -> list[str]:
         """Dispatch events based on webhook payload."""
